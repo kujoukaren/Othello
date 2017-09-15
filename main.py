@@ -196,7 +196,7 @@ class OthelloGui:
             for j in range(len(self._canvas[i])):
                 if self._canvas[i][j] == event.widget:
                     row, col = i, j
-        if self._game.isValidMove(row, col):
+        if self._game.isMoveValid(row, col):
             width = event.widget.winfo_width()
             height = event.widget.winfo_height()
             event.widget.create_oval(0,0,width,height,fill='black',outline='black')
